@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 class Form extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.initialState = {
       name: '',
       job: '',
-    }
+    };
 
-    this.state = this.initialState
+    this.state = this.initialState;
   }
 
   handleChange = event => {
@@ -46,7 +46,7 @@ class Form extends Component {
           onChange={this.handleChange} />
         <button type="submit">Submit</button>
       </form>
-    );
+    )
   }
 }
 

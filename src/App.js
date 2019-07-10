@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import logo from './logo.svg'
+import logo from './logo.svg'
 import Form from './Form'
 import Table from './Table'
 import './App.css'
@@ -44,7 +44,12 @@ class App extends Component {
     const { characters } = this.state
 
     return (
-      <div className="container">
+      <div className="full-container">
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+          </header>
+        </div>
         <Table
           characterData={characters}
           removeCharacter={this.removeCharacter} />
