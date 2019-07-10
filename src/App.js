@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import logo from './logo.svg'
+import Form from './Form'
 import Table from './Table'
 import './App.css'
 
@@ -35,12 +36,20 @@ class App extends Component {
     })
   }
 
+  handleSubmit = character => {
+    this.setState({ characters: [...this.state.characters, character] })
+  }
+
   render() {
     const { characters } = this.state
 
     return (
       <div className="container">
-        <Table characterData={characters} removeCharacter={this.removeCharacter} />
+        <Table
+          characterData={characters}
+          removeCharacter={this.removeCharacter} />
+        <Form
+          handleSubmit={this.handleSubmit} />
       </div>
     )
   }
